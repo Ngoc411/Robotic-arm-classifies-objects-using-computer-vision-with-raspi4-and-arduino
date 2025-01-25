@@ -49,7 +49,7 @@ def detect_line(frame):
 
 # Example usage of the detect_line function
 if __name__ == "__main__":
-    cap = cv2.VideoCapture(1)  # Open the default camera
+    cap = cv2.VideoCapture(1)  # Open the default camera | can swtich it to 0,2, ...
     cap.set(3, 640)  # Set frame width
     cap.set(4, 480)  # Set frame height
 

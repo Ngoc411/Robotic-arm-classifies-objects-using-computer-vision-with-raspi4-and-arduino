@@ -52,7 +52,6 @@ float gamma = 0.0;
 bool ready = false;
 bool homeReady = true;
 
-#define STORAGE_SIZE 30
 #define DATA_SIZE 6
 
 uint8_t current_data[DATA_SIZE] = {0};  
@@ -63,9 +62,6 @@ bool received_data = false;
 
 void setup() {
   Serial.begin(115200);
-
-  Wire.begin(1);
-  Wire.onReceive(receiveEvent); 
 
   bigServo.attach(bigServoPin);
   bigServo.write(90);
@@ -109,6 +105,8 @@ void setup() {
 }
 
 void loop() {
+  receiveUARTData();
+
   if(!homeReady) {
     home(-2482, -2868, 0, 280, 0, 90, 90, 90);
   }
@@ -191,6 +189,8 @@ void actPhase(
   // bước 5: chuyển hình dạng cánh tay về dạng mặc định 
 
   home(1860, 1086, 0, 90, -deg57_class, 90, 90, 90);
+
+  Serial.write(0x01);
 }
 
 void home(int degHome42_1, int degHome42_2, int degHome42_3, int degHome42_4, int degHome57, int degHomeBigSer, int degHomeRightSmallSer, int degHomeLeftSmallSer) {
@@ -262,12 +262,11 @@ void unitArm() {
 
 // -------------------- //
 
-void receiveEvent(int numBytes) {
-  while (Serial.available() < DATA_SIZE) {
-  }
-
-  for (int i = 0; i < DATA_SIZE; i++) {
-    current_data[i] = Serial.read();
+void receiveUARTData() {
+  if (Serial.available() >= DATA_SIZE) 
+    for (int i = 0; i < DATA_SIZE; i++) {
+      current_data[i] = Serial.read();
+    }
     received_data = true;
   }
 }
@@ -347,7 +346,7 @@ int convert_deg_to_phase(int type, int ratio, float deg) {
     return (int) ((deg * 400.0 * ratio) / 360.0);
   } 
   if (type == 57) {
-    return (int) ((deg * 1600.0 * ratio) / 360.0);
+    return (int) ((deg * 800.0 * ratio) / 360.0);
   }
   return 0; 
 }

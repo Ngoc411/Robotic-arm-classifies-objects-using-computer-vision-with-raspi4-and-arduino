@@ -31,13 +31,15 @@ graph TD;
   E -->|Success| F(Identify Object & Determine Target)
   E -->|Failure| C
   F --> G(Convert to Movement Commands)
-  G --> H(Send Command to Arduino)
-  H --> I{Wait for Acknowledgment?}
-  I -->|No| K
-  I -->|Yes| J(Log Result & Display)
-  J --> K{Exit?}
-  K -->|No| C
-  K -->|Yes| L(End)
+  G --> H{received_data = True?}
+  H -->|No| M{Exit?}
+  H -->|Yes| I(Send Command to Arduino)
+  I --> J(Set received_data = False)
+  J --> K{Wait for Acknowledgment?}
+  K -->|No| M
+  K -->|Yes| L(Set received_data = True)
+  M -->|No| C
+  M -->|Yes| N(End)
 ```
   
 2. Robotic Control Subsystem: Moves the robotic arm based on classifications.

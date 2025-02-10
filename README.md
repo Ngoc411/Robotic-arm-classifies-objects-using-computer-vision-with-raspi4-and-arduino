@@ -104,4 +104,15 @@ graph TD;
 
 1. System Initialization: Start Raspberry Pi and Arduino.
 2. Object Detection: Capture image and classify the object.
+
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/3cfc5a853f931bac9c1f33cd3fd34bf08b185ccf/Screenshot%202025-02-10%20112744.png" width="800">
+</div>
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/3cfc5a853f931bac9c1f33cd3fd34bf08b185ccf/Screenshot%202025-02-10%20112810.png" width="800">
+</div>
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/3cfc5a853f931bac9c1f33cd3fd34bf08b185ccf/Screenshot%202025-02-10%20112831.png" width="800">
+</div>
+
 3. Robotic Arm Movement: Calculate and execute joint angles for object handling.

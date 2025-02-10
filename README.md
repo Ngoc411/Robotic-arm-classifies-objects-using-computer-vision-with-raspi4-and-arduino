@@ -66,8 +66,9 @@ graph TD;
 - Raspberry Pi 4: Runs object classification and sends movement commands.
 - Arduino: Controls the robotic arm servos.
 - Camera Module: Captures images for object recognition.
-- Robotic Arm with Servo Motors: Moves objects based on classification.
-- Power Supply: Provides power to components.
+- Robotic Arm with Step Motors and Servo Motors: Moves objects based on classification.
+- Drivers: 8825
+- Power Supply: 24V 5A Provides power to components.
 - Arm design
 <div align="center">
   <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/203e2170ec728cdbb8de745ae4613ccea84c3a35/Screenshot%202025-02-10%20111221.png" width="600">
@@ -76,10 +77,15 @@ graph TD;
 ## Model Training Process
 
 1. Data Collection: Capture images of objects using the camera module.
-2. Preprocessing: Resize, normalize, and augment images.
-3. Model Selection: Use a convolutional neural network (CNN) for classification.
-4. Training: Train the model using TensorFlow/Keras.
-5. Deployment: Convert the trained model to a format suitable for Raspberry Pi.
+<div align="center"; display="flex">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/fbe2872c6891985c39d5b5bab8f1aaf8e47635ed/Screenshot%202025-02-10%20111242.png" height="500">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/fbe2872c6891985c39d5b5bab8f1aaf8e47635ed/Screenshot%202025-02-10%20111251.png" height="500">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/fbe2872c6891985c39d5b5bab8f1aaf8e47635ed/Screenshot%202025-02-10%20111303.png" height="500">
+</div>
+3. Preprocessing: Resize, normalize, and augment images.
+4. Model Selection: Use a convolutional neural network (CNN) for classification.
+5. Training: Train the model using TensorFlow/Keras.
+6. Deployment: Convert the trained model to a format suitable for Raspberry Pi.
 
 ## Robotic Arm Kinematics
 

@@ -33,11 +33,11 @@ graph TD;
   F --> G(Convert to Movement Commands)
   G --> H(Send Command to Arduino)
   H --> I{Wait for Acknowledgment?}
-  I -->|No| H
+  I -->|No| B
   I -->|Yes| J(Log Result & Display)
-  J --> K{Next Object?}
-  K -->|Yes| C
-  K -->|No| L(End)
+  J --> K{Exit?}
+  K -->|No| C
+  K -->|Yes| L(End)
 ```
   
 2. Robotic Control Subsystem: Moves the robotic arm based on classifications.

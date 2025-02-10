@@ -5,10 +5,8 @@
 This project involves a robotic arm capable of classifying objects using computer vision and sorting them accordingly. A Raspberry Pi 4 processes images captured from a camera, runs a trained machine learning model, and communicates with an Arduino to control the robotic arm’s movements.
 
 <div align="center">
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085345.png" width="500">
-    <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085354.png" width="500">
-  </div>
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085345.png" width="500">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085354.png" width="500">
   <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/54c9f63219aa35e4910f3e36349a6c0ea116569f/z6263065847922_1003b7cafe9a5f4616814465f5f8eb61.jpg" width="500">
 </div>
 
@@ -19,8 +17,9 @@ This project involves a robotic arm capable of classifying objects using compute
 ## System Overview
 
 The system consists of:
-1. Computer Vision Subsystem: Identifies and classifies objects.
+1. **Computer Vision Subsystem:** Identifies and classifies objects.
 
+```mermaid
 graph TD;
   A(Start) --> B(Initialize Camera & Load Model)
   B --> C(Capture Image)
@@ -36,8 +35,9 @@ graph TD;
   J --> K{Next Object?}
   K -->|Yes| C
   K -->|No| L(End)
+```
   
-3. Robotic Control Subsystem: Moves the robotic arm based on classifications.
+2. Robotic Control Subsystem: Moves the robotic arm based on classifications.
 
 ## Hardware Components
 

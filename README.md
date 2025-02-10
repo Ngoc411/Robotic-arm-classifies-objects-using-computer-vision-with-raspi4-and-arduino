@@ -4,8 +4,8 @@
 
 This project involves a robotic arm capable of classifying objects using computer vision and sorting them accordingly. A Raspberry Pi 4 processes images captured from a camera, runs a trained machine learning model, and communicates with an Arduino to control the robotic arm’s movements.
 
-<p align="center" justify-content="center">
-  <p align="center" justify-content="center">
+<p align="center" display="flex">
+  <p align="center" display="flex" flex-direction="column">
     <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085345.png" width="500">
     <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/cb1debd6fb9ecf168e645abf7edaa6c06ce01490/Screenshot%202025-02-10%20085354.png" width="500">
   </p>

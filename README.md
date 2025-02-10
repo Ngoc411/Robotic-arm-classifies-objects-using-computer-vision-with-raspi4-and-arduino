@@ -70,12 +70,6 @@ graph TD;
 - Robotic Arm with Servo Motors: Moves objects based on classification.
 - Power Supply: Provides power to components.
 
-## Software Architecture
-
-1. Object Detection & Classification: OpenCV and a trained model classify objects.
-2. Communication Protocol: Serial communication between Raspberry Pi and Arduino.
-3. Motor Control: Arduino processes received commands and moves servos.
-
 ## Model Training Process
 
 1. Data Collection: Capture images of objects using the camera module.

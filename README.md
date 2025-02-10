@@ -33,7 +33,7 @@ graph TD;
   F --> G(Convert to Movement Commands)
   G --> H(Send Command to Arduino)
   H --> I{Wait for Acknowledgment?}
-  I -->|No| J
+  I -->|No| K
   I -->|Yes| J(Log Result & Display)
   J --> K{Exit?}
   K -->|No| C

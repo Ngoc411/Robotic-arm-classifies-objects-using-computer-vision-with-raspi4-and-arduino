@@ -57,7 +57,7 @@ graph TD;
   H --> I{Movement Complete?}
   I -->|No| H
   I -->|Yes| J(Send Acknowledgment to Raspberry Pi)
-  J --> K{Next Command?}
+  J --> K{Exit?}
   K -->|Yes| C
   K -->|No| L(End)
 ```

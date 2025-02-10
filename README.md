@@ -20,7 +20,24 @@ This project involves a robotic arm capable of classifying objects using compute
 
 The system consists of:
 1. Computer Vision Subsystem: Identifies and classifies objects.
-2. Robotic Control Subsystem: Moves the robotic arm based on classifications.
+
+graph TD;
+  A(Start) --> B(Initialize Camera & Load Model)
+  B --> C(Capture Image)
+  C --> D(Preprocess Image)
+  D --> E(Run Object Classification Model)
+  E -->|Success| F(Identify Object & Determine Target)
+  E -->|Failure| C
+  F --> G(Convert to Movement Commands)
+  G --> H(Send Command to Arduino)
+  H --> I{Wait for Acknowledgment?}
+  I -->|No| H
+  I -->|Yes| J(Log Result & Display)
+  J --> K{Next Object?}
+  K -->|Yes| C
+  K -->|No| L(End)
+  
+3. Robotic Control Subsystem: Moves the robotic arm based on classifications.
 
 ## Hardware Components
 

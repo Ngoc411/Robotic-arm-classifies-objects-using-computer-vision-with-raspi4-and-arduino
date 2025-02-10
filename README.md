@@ -100,6 +100,22 @@ graph TD;
 
 ## Robotic Arm Kinematics
 
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/5ade2921bac0592ef0fe79733c0ac4793d6177cc/Screenshot%202025-02-10%20125641.png" width="800">
+</div>
+
+The problem is to find 3 main angles: alpha, beta and gamma with fixed length a, b, c and h
+
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/a2d12d7642d21b4da05c886abbbe4d683d9bc39f/Screenshot%202025-02-10%20125404.png" width="800">
+</div>
+
+The camera will be up side down like this, so we can base on the following picture to measure the coordinate of objects
+
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/a2d12d7642d21b4da05c886abbbe4d683d9bc39f/Screenshot%202025-02-10%20125845.png" width="800">
+</div>
+
 ## Operation
 
 1. System Initialization: Start Raspberry Pi and Arduino.

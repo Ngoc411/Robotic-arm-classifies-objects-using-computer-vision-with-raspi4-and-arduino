@@ -16,8 +16,7 @@ This project involves a robotic arm capable of classifying objects using compute
 
 ## System Overview
 
-The system consists of:
-1. **Computer Vision Subsystem:** Identifies and classifies objects.
+1. Computer Vision Subsystem: Identifies and classifies objects
 
 ```mermaid
 graph TD;
@@ -38,6 +37,24 @@ graph TD;
 ```
   
 2. Robotic Control Subsystem: Moves the robotic arm based on classifications.
+
+``` mermaid
+graph TD;
+  A(Start) --> B(Initialize Serial Communication & Motors)
+  B --> C{Wait for Command?}
+  C -->|No| C
+  C -->|Yes| D(Decode Received Command)
+  D --> E(Convert to Joint Angles)
+  E --> F{Are Angles Valid?}
+  F -->|No| G(Send Error & Return to Wait)
+  F -->|Yes| H(Move Servos)
+  H --> I{Movement Complete?}
+  I -->|No| H
+  I -->|Yes| J(Send Acknowledgment to Raspberry Pi)
+  J --> K{Next Command?}
+  K -->|Yes| C
+  K -->|No| L(End)
+```
 
 ## Hardware Components
 

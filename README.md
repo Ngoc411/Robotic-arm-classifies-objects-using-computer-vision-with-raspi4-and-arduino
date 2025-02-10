@@ -82,10 +82,13 @@ graph TD;
   <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/fbe2872c6891985c39d5b5bab8f1aaf8e47635ed/Screenshot%202025-02-10%20111251.png" height="300">
   <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/fbe2872c6891985c39d5b5bab8f1aaf8e47635ed/Screenshot%202025-02-10%20111303.png" height="300">
 </div>
-3. Preprocessing: Resize, normalize, and augment images.
-4. Model Selection: Use a convolutional neural network (CNN) for classification.
-5. Training: Train the model using TensorFlow/Keras.
-6. Deployment: Convert the trained model to a format suitable for Raspberry Pi.
+2. Preprocessing: Resize, normalize, and augment images.
+<div align="center">
+  <img src="https://github.com/Ngoc411/Robotic-arm-classifies-objects-using-computer-vision-with-raspi4-and-arduino/blob/67e671b25cc8c84026e3b386a03e4a521a89dead/Screenshot%202025-02-10%20112149.png">
+</div>
+3. Model Selection: Use a convolutional neural network (CNN) for classification.
+4. Training: Train the model using TensorFlow/Keras.
+5. Deployment: Convert the trained model to a format suitable for Raspberry Pi.
 
 ## Robotic Arm Kinematics
 
